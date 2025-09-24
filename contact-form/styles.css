@@ -118,40 +118,35 @@ button:hover {
     transform: 0.5s ease;
     
 }
-
-    .error-message {
-      background: #f8d7da;
-      color: #721c24;
-    }
-
-    .submitted {
-      background: #d4edda;
-      color: #155724;
-    }
-
-    
-
+ 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
- .error-message,
-.submitted {
+.submitted, .error-message {
   display: none;
-  position: absolute; /* relative to form container */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 20px 30px;
-  border: 2px solid #333;
+  padding: 1rem 2rem;
   border-radius: 8px;
-  text-align: center;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
-  z-index: 100; /* make sure it appears above form */
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.submitted {
+  background: #4CAF50;
+  color: white;
+}
+
+.error-message {
+  background: #f44336;
+  color: white;
 }
 
  

@@ -27,6 +27,12 @@ form.addEventListener('submit', function(e) {
 
   if(username.value.trim() === "" && email.value.trim() === "" && message.value.trim() === "") {
     errorPopup.style.display = "block";
+       
+
+  setTimeout(() => {
+      errorPopup.style.display = "none";
+    }, 1500);
+  
 }
 
     else if(username.value.trim() === "") {
@@ -46,12 +52,17 @@ form.addEventListener('submit', function(e) {
     }
     else {
       successPopup.style.display = "block";
+      
+
+  setTimeout(() => {
+      successPopup.style.display = "none";
+    }, 3000);
+  
       form.reset();
     }
   });
 
-// Clear error messages on input    
- 
+// Clear error messages on input
 
 [username, email, message].forEach(field => {
   field.addEventListener('input', () => {
