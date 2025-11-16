@@ -74,7 +74,8 @@ button{
     text-align: center;
 }
 
-.bottom > p{
+.bottom > p,
+label{
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
 
